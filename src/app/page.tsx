@@ -81,14 +81,14 @@ export default function HomePage() {
             environment for children and adults.
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
-            <div className="rounded-[1.25rem] border border-[var(--line-soft)] bg-[var(--surface)] p-5 shadow-[var(--shadow-card)]">
+            <div className="rounded-[1.25rem] border border-(--line-soft) bg-(--surface) p-5 shadow-(--shadow-card)">
               <h3 className="font-display text-xl font-bold">Our Vision</h3>
               <p className="mt-2 text-sm leading-6 text-(--ink-muted)">
                 Make Quran learning accessible, respectful, and consistent for
                 students worldwide.
               </p>
             </div>
-            <div className="rounded-[1.25rem] border border-[var(--line-soft)] bg-[var(--surface)] p-5 shadow-[var(--shadow-card)]">
+            <div className="rounded-[1.25rem] border border-(--line-soft) bg-(--surface) p-5 shadow-(--shadow-card)">
               <h3 className="font-display text-xl font-bold">Our Mission</h3>
               <p className="mt-2 text-sm leading-6 text-(--ink-muted)">
                 Deliver high-quality Quran instruction through caring teachers
@@ -102,7 +102,7 @@ export default function HomePage() {
             </ButtonLink>
           </div>
         </div>
-        <div className="relative min-h-[360px] overflow-hidden rounded-[1.75rem] border border-[var(--line-soft)] shadow-[var(--shadow-soft)]">
+        <div className="relative min-h-90 overflow-hidden rounded-[1.75rem] border border-(--line-soft) shadow-(--shadow-soft)">
           <Image
             src="/images/aboutImg.webp"
             alt="Quran Academy learning environment"
@@ -114,7 +114,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[var(--surface-soft)] py-16 sm:py-20">
+      <section className="bg-(--surface-soft) py-16 sm:py-20">
         <div className="container-page">
           <SectionHeader
             eyebrow="Featured Courses"
@@ -141,9 +141,9 @@ export default function HomePage() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-[1.35rem] border border-[var(--line-soft)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+              className="rounded-[1.35rem] group border border-(--line-soft) bg-(--surface) p-6 shadow-(--shadow-card) transition-all duration-200 cursor-pointer hover:-translate-y-1 hover:shadow-(--shadow-soft)"
             >
-              <span className="islamic-shape mb-5 grid size-12 place-items-center bg-[var(--gold)] text-white">
+              <span className="rounded-full shadow-sm mb-5 grid size-12 place-items-center bg-(--emerald) text-white group-hover:bg-(--gold) transition-colors duration-300">
                 {feature.icon}
               </span>
               <h3 className="font-display text-xl font-bold">
@@ -157,9 +157,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="emerald-pattern py-16 text-white sm:py-20">
+      <section className="relative py-16 text-white sm:py-20">
+        {/* Overlay */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-linear-to-r from-(--emerald-deep) via-(--emerald-dark)/82 to-(--emerald-deep)" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_22%,rgba(230,169,54,0.22),transparent_18rem)]" />
+        </div>
+
         <div className="container-page grid gap-10 lg:grid-cols-[0.9fr_1fr] lg:items-center">
-          <div className="relative min-h-[360px] overflow-hidden rounded-[1.75rem] border border-white/14 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.2)] outline-4 outline-yellow-500/12">
+          <div className="relative min-h-90 overflow-hidden rounded-[1.75rem] border border-white/14 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.2)] outline-4 outline-yellow-500/12">
             <Image
               src="/images/oriantation.webp"
               alt="Student reciting Quran during online lesson"
@@ -169,7 +175,7 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--gold)]">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-(--gold)">
               Upcoming Event
             </p>
             <h2 className="font-display mt-3 text-3xl sm:text-4xl font-bold">
@@ -199,15 +205,15 @@ export default function HomePage() {
           {testimonials.map((item) => (
             <article
               key={item.name}
-              className="rounded-[1.35rem] border border-[var(--line-soft)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)]"
+              className="rounded-[1.35rem] border border-(--line-soft) bg-(--surface) p-6 shadow-(--shadow-card)"
             >
-              <p className="text-[var(--gold)]" aria-label="5 star rating">
+              <p className="text-(--gold)" aria-label="5 star rating">
                 &#9733;&#9733;&#9733;&#9733;&#9733;
               </p>
-              <p className="mt-4  text-[var(--ink-muted)]">{item.text}</p>
-              <h3 className="mt-5 font-bold text-[var(--emerald)]">
-                {item.name}
-              </h3>
+              <p className="mt-4 leading-normal  text-(--ink-muted)">
+                {item.text}
+              </p>
+              <h3 className="mt-5 font-bold text-(--emerald)">{item.name}</h3>
             </article>
           ))}
         </div>

@@ -4,7 +4,7 @@ import type { Course } from "@/data/site";
 
 export function CourseCard({ course }: { course: Course }) {
   return (
-    <article className="overflow-hidden rounded-[1.35rem] border border-[var(--line-soft)] bg-[var(--surface)] shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+    <article className="overflow-hidden cursor-pointer rounded-[1.35rem] border border-[var(--line-soft)] bg-[var(--surface)] shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
       <div className="relative aspect-[4/2.4]">
         <Image
           src={course.image}
@@ -12,7 +12,7 @@ export function CourseCard({ course }: { course: Course }) {
           fill
           priority
           fetchPriority="high"
-          quality={10}
+          quality={100}
           className="object-cover"
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />

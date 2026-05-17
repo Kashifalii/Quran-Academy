@@ -11,26 +11,26 @@ export function HomeHero() {
         fill
         priority
         fetchPriority="high"
-        quality={10}
+        quality={100}
         sizes="100vw"
-        className="object-cover object-center -z-20"
+        className="object-cover object-center -z-20 sm:block hidden"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-linear-to-r from-[var(--emerald-deep)] via-[var(--emerald-dark)]/82 to-black/34" />
+      <div className="absolute sm:hidden inset-0 -z-10">
+        <div className="absolute inset-0 bg-linear-to-r from-[var(--emerald-deep)]  to-(--emerald-deep)" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_22%,rgba(230,169,54,0.22),transparent_18rem)]" />
       </div>
 
       {/* Content */}
-      <div className="container-page relative grid min-h-[760px] items-center gap-10 pb-16 pt-44 sm:pt-40 lg:min-h-[780px] lg:pb-0 lg:pt-32 md:grid-cols-[1fr_0.86fr]">
+      <div className="container-page relative grid h-auto sm:min-h-[760px] items-center gap-10 pb-16 pt-44 sm:pt-40 lg:min-h-[780px] lg:pb-0 lg:pt-32 md:grid-cols-[1fr_0.86fr]">
         <div className="md:max-w-2xl w-full">
           <p className="mb-3 w-fit rounded-full border border-white/14 bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.2em] text-(--gold-soft) backdrop-blur-md sm:text-sm">
             Online Quran Academy
           </p>
 
           <h1 className="font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl xl:text-7xl">
-            Pray to Allah and Learn Quran with Confidence
+            Pray to Allah and Learning Quran with Confidence
           </h1>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-white/82 sm:mt-5 sm:text-lg">

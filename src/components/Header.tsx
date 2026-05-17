@@ -59,7 +59,7 @@ export function Header() {
           <span className="flex size-11 items-center justify-center rounded-full bg-[var(--gold)] p-2 text-lg font-black text-white shadow-[0_10px_22px_rgba(230,169,54,0.22)] outline-4 outline-yellow-500/20">
             قرآن
           </span>
-          <span className="hidden font-display text-xl font-bold sm:block">
+          <span className=" font-display text-xl font-bold">
             Quran Academy
           </span>
         </Link>
