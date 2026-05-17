@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Lora", serif;
+}
+
+:root {
+  --background: #f6f8f0;
+  --surface: #fffdf7;
+  --surface-soft: #edf6eb;
+  --foreground: #171611;
+  --emerald: #087a53;
+  --emerald-dark: #063c31;
+  --emerald-deep: #052b25;
+  --gold: #e6a936;
+  --gold-deep: #b87719;
+  --gold-soft: #fff2c9;
+  --mint: #dff2df;
+  --ink-muted: #615f55;
+  --line-soft: rgba(6, 60, 49, 0.12);
+  --shadow-soft: 0 18px 55px rgba(20, 45, 34, 0.1);
+  --shadow-card: 0 12px 34px rgba(24, 47, 39, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 242, 201, 0.46), transparent 30rem),
+    radial-gradient(circle at 90% 5%, rgba(223, 242, 223, 0.7), transparent 24rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container-page {
+  width: min(1140px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.islamic-shape {
+  clip-path: polygon(50% 0%, 61% 15%, 79% 9%, 84% 27%, 100% 37%, 88% 50%, 100% 63%, 84% 73%, 79% 91%, 61% 85%, 50% 100%, 39% 85%, 21% 91%, 16% 73%, 0% 63%, 12% 50%, 0% 37%, 16% 27%, 21% 9%, 39% 15%);
+}
+
+.ornament-bg {
+  background-image:
+    linear-gradient(120deg, rgba(255, 253, 247, 0.92), rgba(237, 246, 235, 0.84)),
+    radial-gradient(circle at 15% 20%, rgba(230, 169, 54, 0.16), transparent 22rem),
+    radial-gradient(circle at 85% 25%, rgba(8, 122, 83, 0.14), transparent 24rem);
+}
+
+.emerald-pattern {
+  background-color: var(--emerald);
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+    radial-gradient(circle at 78% 28%, rgba(230, 169, 54, 0.2), transparent 20rem);
+  background-size: 56px 56px, 56px 56px, auto;
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: var(--gold);
+}
+
+.font-display {
+  letter-spacing: 0;
+}
+
+::selection {
+  background: rgba(230, 169, 54, 0.28);
+  color: var(--emerald-deep);
+}
+
+@media (max-width: 640px) {
+  .container-page {
+    width: min(100% - 24px, 1140px);
+  }
+}
