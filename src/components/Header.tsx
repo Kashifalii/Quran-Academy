@@ -11,14 +11,14 @@ export function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-30 text-white">
-      <div className="border-b border-white/10 bg-[var(--emerald-deep)]/55 backdrop-blur-xl">
+      <div className="border-b border-white/10 bg-(--emerald-deep)/55 backdrop-blur-xl">
         <div className="container-page flex min-h-11 items-center justify-between gap-4 text-xs font-semibold sm:text-sm">
-          <p className="hidden sm:block">
+          <p className="cursor-pointer">
             <span className="font-bold">Call Us:</span> +1 800 123 4567
           </p>
-          <p>Online Quran classes for families worldwide</p>
+          <p className="hidden sm:block">Online Quran classes for families worldwide</p>
           <div
-            className="hidden items-center gap-4 md:flex"
+            className=" items-center gap-4 flex"
             aria-label="Social links"
           >
             <Link
@@ -26,7 +26,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="focus-ring font-bold text-white/86 transition hover:text-[var(--gold)]"
+              className="focus-ring font-bold text-white/86 transition hover:text-(--gold)"
             >
               f
             </Link>
@@ -35,7 +35,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="linkedin"
-              className="focus-ring font-bold text-white/86 transition hover:text-[var(--gold)]"
+              className="focus-ring font-bold text-white/86 transition hover:text-(--gold)"
             >
               in
             </Link>
@@ -44,7 +44,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="focus-ring font-bold text-white/86 transition hover:text-[var(--gold)]"
+              className="focus-ring font-bold text-white/86 transition hover:text-(--gold)"
             >
               ig
             </Link>
@@ -56,10 +56,10 @@ export function Header() {
         aria-label="Main navigation"
       >
         <Link href="/" className="focus-ring flex items-center gap-3">
-          <span className="flex size-11 items-center justify-center rounded-full bg-[var(--gold)] p-2 text-lg font-black text-white shadow-[0_10px_22px_rgba(230,169,54,0.22)] outline-4 outline-yellow-500/20">
+          <span className="flex size-11 items-center justify-center rounded-full bg-(--gold) p-2 text-lg font-black text-white shadow-[0_10px_22px_rgba(230,169,54,0.22)] outline-4 outline-yellow-500/20">
             قرآن
           </span>
-          <span className=" font-display text-xl font-bold">
+          <span className="font-display text-md md:text-xl font-bold">
             Quran Academy
           </span>
         </Link>
@@ -68,7 +68,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-[var(--gold)] ${
+              className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold)
                 pathname === item.href ? "text-[var(--gold)]" : "text-white/88"
               }`}
             >
@@ -79,7 +79,7 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/fee-plans"
-            className="focus-ring rounded-full bg-[var(--gold)] px-5 py-2.5 text-sm font-extrabold shadow-[0_10px_24px_rgba(184,119,25,0.24)] transition hover:bg-[var(--gold-deep)]"
+            className="focus-ring rounded-full bg-(--gold) px-5 py-2.5 text-sm font-extrabold shadow-[0_10px_24px_rgba(184,119,25,0.24)] transition hover:bg-(--gold-deep)"
           >
             Fee Plans
           </Link>
@@ -95,7 +95,7 @@ export function Header() {
         </button>
       </nav>
       {open ? (
-        <div className="container-page mt-3 rounded-3xl border border-white/10 bg-[var(--emerald-dark)]/96 p-4 shadow-2xl backdrop-blur-xl lg:hidden">
+        <div className="container-page mt-3 rounded-3xl border border-white/10 bg-(--emerald-dark)/96 p-4 shadow-2xl backdrop-blur-xl lg:hidden">
           <div className="grid gap-2">
             {navItems.map((item) => (
               <Link

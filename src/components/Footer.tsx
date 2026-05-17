@@ -5,7 +5,7 @@ import { ButtonLink } from "./ButtonLink";
 export function Footer() {
   return (
     <footer className="relative mt-20 bg-[url('/images/footer-bg.jpg')] bg-cover bg-center bg-no-repeat text-white">
-      <span className="absolute inset-0 z-0 bg-[var(--emerald-deep)]/82"></span>
+      <span className="absolute inset-0 z-0 bg-(--emerald-deep)/82"></span>
       <div className="container-page relative z-10 py-14">
         <div className="flex flex-col gap-6 border-b border-white/15 pb-12 lg:flex-row lg:items-center lg:justify-between">
           <div>
@@ -24,7 +24,7 @@ export function Footer() {
               href="/"
               className="focus-ring flex flex-col items-start gap-4 md:items-center"
             >
-              <span className="flex size-24 items-center justify-center rounded-full bg-[var(--gold)] p-2 text-3xl font-black text-white shadow-[0_18px_36px_rgba(0,0,0,0.18)] outline-4 outline-yellow-500/20 sm:size-28 sm:text-4xl">
+              <span className="flex size-24 items-center justify-center rounded-full bg-(--gold) p-2 text-3xl font-black text-white shadow-[0_18px_36px_rgba(0,0,0,0.18)] outline-4 outline-yellow-500/20 sm:size-28 sm:text-4xl">
                 قرآن
               </span>
               <span className="font-display text-xl font-bold">
@@ -57,7 +57,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="focus-ring transition hover:text-[var(--gold)]"
+                    className="focus-ring transition hover:text-(--gold)"
                   >
                     {item.label}
                   </Link>

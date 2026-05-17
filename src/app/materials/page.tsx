@@ -30,23 +30,23 @@ export default function MaterialsPage() {
           {materials.map((material) => (
             <article
               key={material.slug}
-              className="rounded-[1.35rem] border border-[var(--line-soft)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+              className="rounded-[1.35rem] border border-(--line-soft) bg-(--surface) p-6 shadow-(--shadow-card) transition hover:-translate-y-1 hover:shadow-(--shadow-soft)"
             >
-              <span className="islamic-shape mb-5 grid size-14 place-items-center bg-[var(--gold)] font-bold text-white">
+              <span className="islamic-shape mb-5 grid size-14 place-items-center bg-(--gold) font-bold text-white">
                 PDF
               </span>
               <h2 className="font-display text-2xl font-bold">
                 {material.title}
               </h2>
-              <p className="mt-3 text-sm font-bold text-[var(--gold)]">
+              <p className="mt-3 text-sm font-bold text-(--gold)">
                 {material.level}
               </p>
-              <p className="mt-3 leading-7 text-[var(--ink-muted)]">
+              <p className="mt-3 leading-7 text-(--ink-muted)">
                 {material.description}
               </p>
               <Link
                 href={`/materials/${material.slug}`}
-                className="focus-ring mt-6 inline-flex rounded-full border border-[var(--gold)] px-5 py-2 text-sm font-extrabold text-[var(--emerald)] hover:bg-[var(--gold-soft)]"
+                className="focus-ring mt-6 inline-flex rounded-full border border-(--gold) px-5 py-2 text-sm font-extrabold text-(--emerald) hover:bg-(--gold-soft)"
               >
                 {material.downloadLabel}
               </Link>

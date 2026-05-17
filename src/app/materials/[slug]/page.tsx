@@ -31,11 +31,11 @@ export default async function MaterialDetailPage({ params }: MaterialPageProps) 
     <>
       <PageHero title={material.title} subtitle={material.description} image="/images/home-quran.jpg" />
       <section className="container-page py-16 sm:py-20">
-        <article className="mx-auto max-w-3xl rounded-[1.5rem] border border-[var(--line-soft)] bg-[var(--surface)] p-6 shadow-[var(--shadow-card)] sm:p-8">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--gold)]">{material.level}</p>
+        <article className="mx-auto max-w-3xl rounded-3xl border border-(--line-soft) bg-(--surface) p-6 shadow-(--shadow-card) sm:p-8">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-(--gold)">{material.level}</p>
           <h2 className="font-display mt-3 text-3xl font-bold sm:text-4xl">Material Overview</h2>
-          <p className="mt-5 leading-8 text-[var(--ink-muted)]">{material.description}</p>
-          <div className="mt-8 rounded-[1.25rem] bg-[var(--surface-soft)] p-5 text-[var(--emerald)]">
+          <p className="mt-5 leading-8 text-(--ink-muted)">{material.description}</p>
+          <div className="mt-8 rounded-[1.25rem] bg-(--surface-soft) p-5 text-(--emerald)">
             This frontend demo reserves the material route and SEO structure. Add real PDF files under public/materials when the academy content is finalized.
           </div>
           <div className="mt-8 flex flex-wrap gap-3">

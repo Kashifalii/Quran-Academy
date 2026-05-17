@@ -22,19 +22,19 @@ export function SectionHeader({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-display text-3xl font-bold leading-tight text-[var(--foreground)] sm:text-4xl">
+      <h2 className="font-display text-3xl font-bold leading-tight text-(--foreground) sm:text-4xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-3 text-sm leading-7 text-(--ink-muted) sm:mt-4 sm:text-base">
+        <p className="mt-3 text-sm text-(--ink-muted) sm:mt-4 sm:text-base">
           {description}
         </p>
       ) : null}
       <div
         className={
           align === "center"
-            ? "mx-auto mt-5 h-1.5 w-16 rounded-full bg-[var(--gold)]"
-            : "mt-5 h-1.5 w-16 rounded-full bg-[var(--gold)]"
+            ? "mx-auto mt-5 h-1.5 w-16 rounded-full bg-(--gold)"
+            : "mt-5 h-1.5 w-16 rounded-full bg-(--gold)"
         }
       />
     </div>

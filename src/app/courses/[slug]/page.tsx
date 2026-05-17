@@ -41,25 +41,25 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
       />
       <section className="container-page grid gap-12 py-16 sm:py-20 lg:grid-cols-[1fr_0.8fr]">
         <article>
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--gold)]">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[--gold]">
             {course.category}
           </p>
           <h2 className="font-display mt-3 text-3xl font-bold sm:text-4xl">
             Course Overview
           </h2>
-          <p className="mt-5 leading-8 text-[var(--ink-muted)]">
+          <p className="mt-5 leading-8 text-[--ink-muted]">
             {course.description}
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
-            <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-5 shadow-[var(--shadow-card)]">
-              <h3 className="font-bold text-[var(--emerald)]">Duration</h3>
-              <p className="mt-2 text-[var(--ink-muted)]">{course.duration}</p>
+            <div className="rounded-[1.25rem] bg-[--surface-soft] p-5 shadow-[--shadow-card]">
+              <h3 className="font-bold text-[--emerald]">Duration</h3>
+              <p className="mt-2 text-[--ink-muted]">{course.duration}</p>
             </div>
-            <div className="rounded-[1.25rem] bg-[var(--surface-soft)] p-5 shadow-[var(--shadow-card)]">
-              <h3 className="font-bold text-[var(--emerald)]">
+            <div className="rounded-[1.25rem] bg-[--surface-soft] p-5 shadow-[--shadow-card]">
+              <h3 className="font-bold text-[--emerald]">
                 Class Schedule
               </h3>
-              <p className="mt-2 text-[var(--ink-muted)]">{course.schedule}</p>
+              <p className="mt-2 text-[--ink-muted]">{course.schedule}</p>
             </div>
           </div>
           <div className="mt-10 grid gap-8 md:grid-cols-2">
@@ -67,7 +67,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
               <h3 className="font-display text-2xl font-bold">
                 Learning Objectives
               </h3>
-              <ul className="mt-4 space-y-3 text-[var(--ink-muted)]">
+              <ul className="mt-4 space-y-3 text-[--ink-muted]">
                 {course.objectives.map((item) => (
                   <li key={item}>• {item}</li>
                 ))}
@@ -77,7 +77,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
               <h3 className="font-display text-2xl font-bold">
                 Learning Outcomes
               </h3>
-              <ul className="mt-4 space-y-3 text-[var(--ink-muted)]">
+              <ul className="mt-4 space-y-3 text-[--ink-muted]">
                 {course.outcomes.map((item) => (
                   <li key={item}>• {item}</li>
                 ))}
@@ -89,8 +89,8 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
           </div>
         </article>
         <aside className="lg:sticky lg:top-8 lg:self-start">
-          <div className="overflow-hidden rounded-[1.5rem] border border-[var(--line-soft)] bg-[var(--surface)] shadow-[var(--shadow-card)]">
-            <div className="relative aspect-[4/3]">
+          <div className="overflow-hidden rounded-3xl border border-[--line-soft] bg-[--surface] shadow-[--shadow-card]">
+            <div className="relative aspect-4/3">
               <Image
                 src={course.image}
                 alt={`${course.title} online Quran lesson`}
@@ -105,12 +105,12 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
                 {Object.entries(course.fees).map(([region, fee]) => (
                   <div
                     key={region}
-                    className="flex justify-between gap-4 border-b border-[var(--line-soft)] pb-2"
+                    className="flex justify-between gap-4 border-b border-[--line-soft] pb-2"
                   >
-                    <dt className="font-bold text-[var(--emerald)]">
+                    <dt className="font-bold text-[--emerald]">
                       {region}
                     </dt>
-                    <dd className="text-[var(--ink-muted)]">{fee}</dd>
+                    <dd className="text-[--ink-muted]">{fee}</dd>
                   </div>
                 ))}
               </dl>

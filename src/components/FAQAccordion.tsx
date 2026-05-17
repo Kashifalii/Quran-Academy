@@ -7,12 +7,12 @@ export function FAQAccordion() {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="mx-auto mt-10 max-w-3xl divide-y divide-[var(--line-soft)] overflow-hidden rounded-[1.5rem] border border-[var(--line-soft)] bg-[var(--surface)] shadow-[var(--shadow-card)]">
+    <div className="mx-auto mt-10 max-w-3xl divide-y divide-(--line-soft) overflow-hidden rounded-3xl border border-(--line-soft) bg-(--surface) shadow-(--shadow-card)">
       {faqs.map((item, index) => (
         <div key={item.question}>
           <button
             type="button"
-            className="focus-ring flex w-full items-center justify-between gap-4 px-5 py-5 text-left font-bold transition hover:bg-[var(--surface-soft)]"
+            className="focus-ring flex w-full items-center justify-between gap-4 px-5 py-5 text-left font-bold transition hover:bg-(--surface-soft)"
             onClick={() => setActive(active === index ? -1 : index)}
             aria-expanded={active === index}
           >

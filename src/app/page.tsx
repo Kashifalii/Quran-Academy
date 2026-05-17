@@ -74,7 +74,7 @@ export default function HomePage() {
             eyebrow="Welcome to Quran Academy"
             title="In the Name of Allah, the Beneficent, the Merciful"
           />
-          <p className="mt-6 leading-8 text-(--ink-muted)">
+          <p className="mt-6 text-(--ink-muted)">
             Quran Academy is a frontend educational portal for families seeking
             structured online Quran learning. Our programs combine qualified
             teachers, personal attention, flexible schedules, and a calm Islamic

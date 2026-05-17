@@ -25,7 +25,7 @@ export function CourseFilter() {
 
   return (
     <div className="mt-10">
-      <div className="grid gap-3 rounded-[1.5rem] border border-[var(--line-soft)] bg-[var(--surface)] p-4 shadow-[var(--shadow-card)] md:grid-cols-[1fr_auto]">
+      <div className="grid gap-3 rounded-3xl border border-(--line-soft) bg-(--surface) p-4 shadow-(--shadow-card) md:grid-cols-[1fr_auto]">
         <label className="sr-only" htmlFor="course-search">
           Search courses
         </label>
@@ -34,7 +34,7 @@ export function CourseFilter() {
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search courses"
-          className="focus-ring min-h-12 rounded-full border border-[var(--line-soft)] bg-white/78 px-5 shadow-inner shadow-black/[0.02]"
+          className="focus-ring min-h-12 rounded-full border border-(--line-soft) bg-white/78 px-5 shadow-inner shadow-black/2"
         />
         <div className="flex flex-wrap gap-2">
           {categories.map((item) => (
@@ -42,7 +42,7 @@ export function CourseFilter() {
               key={item}
               type="button"
               onClick={() => setCategory(item)}
-              className={`focus-ring cursor-pointer rounded-full px-4 py-2 text-sm font-extrabold transition ${category === item ? "bg-(--gold) text-white shadow-[0_10px_24px_rgba(184,119,25,0.18)]" : "bg-(--surface-soft) text-(--emerald) hover:bg-[var(--gold-soft)]"}`}
+              className={`focus-ring cursor-pointer rounded-full px-4 py-2 text-sm font-extrabold transition ${category === item ? "bg-(--gold) text-white shadow-[0_10px_24px_rgba(184,119,25,0.18)]" : "bg-(--surface-soft) text-(--emerald) hover:bg-(--gold-soft)"}`}
             >
               {item}
             </button>
@@ -55,7 +55,7 @@ export function CourseFilter() {
         ))}
       </div>
       {filtered.length === 0 ? (
-        <p className="mt-8 text-center text-[var(--ink-muted)]">
+        <p className="mt-8 text-center text-(--ink-muted)">
           No courses match your search.
         </p>
       ) : null}

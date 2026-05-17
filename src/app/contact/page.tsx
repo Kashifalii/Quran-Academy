@@ -33,7 +33,7 @@ export default function ContactPage() {
             <ContactForm />
           </div>
         </div>
-        <div className="relative mx-auto min-h-[360px] w-full max-w-md overflow-hidden rounded-[1.75rem] border border-[var(--line-soft)] bg-[var(--surface)] shadow-[var(--shadow-card)]">
+        <div className="relative mx-auto min-h-90 w-full max-w-md overflow-hidden rounded-[1.75rem] border border-(--line-soft) bg-(--surface) shadow-(--shadow-card)">
           <Image
             src="/images/contactImg.webp"
             alt="Quran Academy contact and mosque reference"
@@ -45,7 +45,7 @@ export default function ContactPage() {
       </section>
       <section className="container-page grid gap-10 py-8 lg:grid-cols-2">
         <div>
-          <p className="mb-2 text-sm font-bold text-[var(--gold)]">
+          <p className="mb-2 text-sm font-bold text-(--gold)">
             Contact Details
           </p>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Get Information</h2>
@@ -56,18 +56,18 @@ export default function ContactPage() {
               ["Address", "Online Academy, Global"],
               ["WhatsApp", "24/7 inquiry support"],
             ].map(([label, value]) => (
-              <div key={label} className="rounded-[1.25rem] border border-[var(--line-soft)] bg-[var(--surface)] p-5 shadow-[var(--shadow-card)]">
-                <h3 className="font-bold text-[var(--emerald)]">{label}</h3>
-                <p className="mt-2 text-sm text-[var(--ink-muted)]">{value}</p>
+              <div key={label} className="rounded-[1.25rem] border border-(--line-soft) bg-(--surface) p-5 shadow-(--shadow-card)">
+                <h3 className="font-bold text-(--emerald)">{label}</h3>
+                <p className="mt-2 text-sm text-(--ink-muted)">{value}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="min-h-[320px] overflow-hidden rounded-[1.5rem] border border-[var(--line-soft)] bg-[var(--gold-soft)] shadow-[var(--shadow-card)]">
+        <div className="min-h-80 overflow-hidden rounded-3xl border border-(--line-soft) bg-(--gold-soft) shadow-(--shadow-card)">
           <iframe
             title="Quran Academy service map"
             src="https://www.google.com/maps?q=London%20Central%20Mosque&output=embed"
-            className="h-full min-h-[320px] w-full"
+            className="h-full min-h-80 w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
