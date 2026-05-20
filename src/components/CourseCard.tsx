@@ -12,13 +12,13 @@ export function CourseCard({ course }: { course: Course }) {
           fill
           priority
           fetchPriority="high"
-          quality={100}
+          quality={75}
           className="object-cover"
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />
       </div>
       <div className="p-5 sm:p-6">
-        <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-(--gold)">
+        <p className=" text-xs font-extrabold uppercase tracking-[0.16em] text-(--gold)">
           {course.category}
         </p>
         <h3 className="font-display text-2xl font-bold leading-snug">

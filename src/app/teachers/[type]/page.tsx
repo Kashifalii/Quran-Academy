@@ -78,6 +78,7 @@ export default async function TeachersPage({ params }: TeacherPageProps) {
                   src={teacher.image}
                   alt={teacher.name}
                   fill
+                  quality={75}
                   className="object-cover"
                   sizes="220px"
                 />

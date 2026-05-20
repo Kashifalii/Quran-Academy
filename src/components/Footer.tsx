@@ -34,7 +34,7 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-display mb-4 text-lg font-bold">Information</h3>
-            <p className="max-w-xs text-sm leading-7 text-white/76">
+            <p className="max-w-xs text-sm leading-6 text-white/76">
               Quran Academy provides live one-on-one Quran learning with
               qualified male and female teachers, flexible schedules, and
               family-friendly fee plans.
