@@ -74,7 +74,7 @@ export default function HomePage() {
             eyebrow="Welcome to Quran Academy"
             title="In the Name of Allah, the Beneficent, the Merciful"
           />
-          <p className="mt-6 text-(--ink-muted)">
+          <p className=" mt-6 text-sm sm:text-base text-(--ink-muted)">
             Quran Academy is a frontend educational portal for families seeking
             structured online Quran learning. Our programs combine qualified
             teachers, personal attention, flexible schedules, and a calm Islamic
@@ -181,7 +181,7 @@ export default function HomePage() {
             <h2 className="font-display mt-3 text-3xl sm:text-4xl font-bold">
               Grand Quran Learning Orientation
             </h2>
-            <p className="mt-5 max-w-xl  text-white/80">
+            <p className="mt-5 max-w-xl text-sm sm:text-base  text-white/80">
               Join our upcoming Quran learning orientation to explore our
               teaching approach, interact with experienced instructors, and
               understand how online classes are structured for students of all
@@ -210,7 +210,7 @@ export default function HomePage() {
               <p className="text-(--gold)" aria-label="5 star rating">
                 &#9733;&#9733;&#9733;&#9733;&#9733;
               </p>
-              <p className="mt-4 leading-normal  text-(--ink-muted)">
+              <p className="mt-4 text-sm sm:text-base leading-normal  text-(--ink-muted)">
                 {item.text}
               </p>
               <h3 className="mt-5 font-bold text-(--emerald)">{item.name}</h3>

@@ -24,7 +24,7 @@ export function FAQAccordion() {
             </span>
           </button>
           {active === index ? (
-            <p className="px-5 pb-5 text-sm leading-7 text-(--ink-muted) sm:text-base">
+            <p className="px-5 pb-5 text-sm text-(--ink-muted) sm:text-base">
               {item.answer}
             </p>
           ) : null}
