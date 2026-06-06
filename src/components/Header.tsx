@@ -60,14 +60,14 @@ export function Header() {
       <div className="border-b border-white/10 bg-(--emerald-deep)/55 backdrop-blur-xl">
         <div className="container-page flex min-h-11 items-center justify-between gap-4 text-xs font-semibold sm:text-sm">
           <p className="cursor-pointer">
-            <span className="font-bold">Call Us:</span> +1 800 123 4567
+            <span className="font-bold">Call Us: +92 3120702891</span> 
           </p>
           <p className="hidden sm:block">
             Online Quran classes for families worldwide
           </p>
           <div className=" items-center gap-4 flex" aria-label="Social links">
             <Link
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/1DK4pbmFCa/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -76,7 +76,7 @@ export function Header() {
               f
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/taleem-ul-quran-campus-587269414?utm_source=share_via&utm_content=profile&utm_medium=member_android"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="linkedin"
@@ -85,7 +85,7 @@ export function Header() {
               in
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/taleemulqurancampus?igsh=MWRmZWszZ20wZzA4MA=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

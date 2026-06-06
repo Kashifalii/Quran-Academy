@@ -48,9 +48,8 @@ export function Footer() {
               Contact Info
             </h3>
             <ul className="space-y-3 text-sm text-white/76">
-              <li>Hotline: +1 800 123 4567</li>
-              <li>Email: admissions@quranacademy.com</li>
-              <li>WhatsApp support available</li>
+              <li>Whatsapp: +92 312 070 2891</li>
+              <li>Email: taleemulqurancampus786@gmail.com</li>
             </ul>
           </div>
           <div>
@@ -70,7 +69,7 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col items-center gap-4 border-t border-white/15 pt-6 text-sm text-white/70 sm:flex-row sm:justify-between">
-          <p>Quran Academy © 2026, All Rights Reserved</p>
+          <p>TaleemulQuran © 2026, All Rights Reserved</p>
           <p>Designed for fast, accessible Quran learning.</p>
         </div>
       </div>

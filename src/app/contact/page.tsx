@@ -51,14 +51,14 @@ export default function ContactPage() {
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Get Information</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {[
-              ["Email", "admissions@quranacademy.com"],
-              ["Phone", "+1 800 123 4567"],
+              ["Email", "taleemulqurancampus786@gmail.com"],
+              ["Phone", "+923120702891 / +966547301072"],
               ["Address", "Online Academy, Global"],
               ["WhatsApp", "24/7 inquiry support"],
             ].map(([label, value]) => (
               <div key={label} className="rounded-[1.25rem] border border-(--line-soft) bg-(--surface) p-5 shadow-(--shadow-card)">
                 <h3 className="font-bold text-(--emerald)">{label}</h3>
-                <p className="mt-2 text-sm text-(--ink-muted)">{value}</p>
+                <p className="mt-2 text-xs font-medium text-(--ink-muted)">{value}</p>
               </div>
             ))}
           </div>
