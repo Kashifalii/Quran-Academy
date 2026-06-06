@@ -2,12 +2,58 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navItems } from "@/data/site";
+import { createClient } from "@/lib/supabase/client";
+import Image from "next/image";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadRole() {
+      try {
+        const supabase = createClient();
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+
+        if (!active || !user) {
+          return;
+        }
+
+        const metadataRole = user.user_metadata?.role;
+        if (metadataRole === "admin") {
+          setIsAdmin(true);
+          return;
+        }
+
+        const { data } = await supabase
+          .from("profiles")
+          .select("role")
+          .eq("id", user.id)
+          .single();
+
+        if (active) {
+          setIsAdmin(data?.role === "admin");
+        }
+      } catch {
+        if (active) {
+          setIsAdmin(false);
+        }
+      }
+    }
+
+    void loadRole();
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   return (
     <header className="absolute inset-x-0 top-0 z-30 text-white">
@@ -16,11 +62,10 @@ export function Header() {
           <p className="cursor-pointer">
             <span className="font-bold">Call Us:</span> +1 800 123 4567
           </p>
-          <p className="hidden sm:block">Online Quran classes for families worldwide</p>
-          <div
-            className=" items-center gap-4 flex"
-            aria-label="Social links"
-          >
+          <p className="hidden sm:block">
+            Online Quran classes for families worldwide
+          </p>
+          <div className=" items-center gap-4 flex" aria-label="Social links">
             <Link
               href="https://facebook.com"
               target="_blank"
@@ -56,11 +101,19 @@ export function Header() {
         aria-label="Main navigation"
       >
         <Link href="/" className="focus-ring flex items-center gap-3">
-          <span className="flex size-11 items-center justify-center rounded-full bg-(--gold) p-2 text-lg font-black text-white shadow-[0_10px_22px_rgba(230,169,54,0.22)] outline-4 outline-yellow-500/20">
+          {/* <span className="flex size-11 items-center justify-center rounded-full bg-(--gold) p-2 text-lg font-black text-white shadow-[0_10px_22px_rgba(230,169,54,0.22)] outline-4 outline-yellow-500/20">
             قرآن
-          </span>
-          <span className="font-display text-md md:text-xl font-bold">
-            Quran Academy
+          </span> */}
+          <Image
+            src="/images/logo.png"
+            alt="Quran Academy learning environment"
+            width={70}
+            height={60}
+            priority
+            className="object-cover leading-tight"
+          />
+           <span className="font-display text-sm font-bold">
+            TaleemulQuran <br></br> Campus
           </span>
         </Link>
         <div className="hidden items-center gap-5 lg:flex">
@@ -68,13 +121,25 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold)
+              className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold) ${
                 pathname === item.href ? "text-[var(--gold)]" : "text-white/88"
               }`}
             >
               {item.label}
             </Link>
           ))}
+          {isAdmin ? (
+            <Link
+              href="/dashboard"
+              className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold) ${
+                pathname.startsWith("/dashboard")
+                  ? "text-[var(--gold)]"
+                  : "text-white/88"
+              }`}
+            >
+              Dashboard
+            </Link>
+          ) : null}
         </div>
         <div className="hidden items-center gap-3 lg:flex">
           <Link
@@ -107,6 +172,15 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            {isAdmin ? (
+              <Link
+                href="/dashboard"
+                onClick={() => setOpen(false)}
+                className="focus-ring rounded-2xl px-3 py-2.5 text-sm font-bold hover:bg-white/10"
+              >
+                Dashboard
+              </Link>
+            ) : null}
           </div>
         </div>
       ) : null}

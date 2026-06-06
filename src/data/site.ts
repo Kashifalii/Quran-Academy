@@ -24,7 +24,7 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/courses", label: "Courses" },
   { href: "/teachers/male", label: "Teachers" },
-  { href: "/fee-plans", label: "Fee Plans" },
+  { href: "/blog", label: "Blog" },
   { href: "/materials", label: "Materials" },
   { href: "/registration", label: "Register" },
   { href: "/contact", label: "Contact" }

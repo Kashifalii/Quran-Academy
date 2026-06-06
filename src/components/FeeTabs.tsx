@@ -1,55 +1,67 @@
 "use client";
 
-import { useState } from "react";
-import { pricing } from "@/data/site";
+import type { FeePlan } from "@/lib/supabase/types";
 import { ButtonLink } from "./ButtonLink";
 
-const labels = Object.keys(pricing) as Array<keyof typeof pricing>;
+function formatPeriod(period: FeePlan["billing_period"]) {
+  if (period === "one_time") {
+    return "one-time";
+  }
 
-export function FeeTabs() {
-  const [active, setActive] = useState<keyof typeof pricing>("USA");
-  const plan = pricing[active];
+  return period;
+}
 
+export function FeeTabs({ plans }: { plans: FeePlan[] }) {
   return (
     <div className="mt-10 rounded-3xl border border-(--line-soft) bg-(--surface) p-4 shadow-(--shadow-card) sm:p-6">
-      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Currency tabs">
-        {labels.map((label) => (
-          <button
-            key={label}
-            type="button"
-            onClick={() => setActive(label)}
-            className={`focus-ring rounded-full px-4 py-2 text-sm font-extrabold transition ${active === label ? "bg-(--gold) text-white shadow-[0_10px_24px_rgba(184,119,25,0.18)]" : "bg-(--surface-soft) text-(--emerald) hover:bg-(--gold-soft)"}`}
-          >
-            {label} - {pricing[label].currency}
-          </button>
-        ))}
-      </div>
-      <div className="mt-6 overflow-x-auto">
-        <table className="w-full min-w-170 border-collapse text-left">
-          <caption className="sr-only">Monthly Quran class fee comparison</caption>
-          <thead>
-            <tr className="bg-(--emerald-dark) text-white">
-              <th className="px-5 py-4">Lesson Plan</th>
-              <th className="px-5 py-4">Lessons/Month</th>
-              <th className="px-5 py-4">Fee/Month</th>
-              <th className="px-5 py-4">For 2nd Sibling</th>
-            </tr>
-          </thead>
-          <tbody>
-            {plan.rows.map((row, index) => (
-              <tr key={row[0]} className={index === 1 ? "bg-(--gold-soft)" : "border-b border-(--line-soft)"}>
-                {row.map((cell) => (
-                  <td key={cell} className="px-5 py-4 text-sm font-semibold text-(--ink-muted)">{cell}</td>
+      {plans.length > 0 ? (
+        <div className="grid gap-5 md:grid-cols-3">
+          {plans.map((plan) => (
+            <article
+              key={plan.id}
+              className={`rounded-[1.25rem] border p-5 ${
+                plan.is_recommended
+                  ? "border-(--gold) bg-(--gold-soft)"
+                  : "border-(--line-soft) bg-white/78"
+              }`}
+            >
+              {plan.is_recommended ? (
+                <p className="mb-3 inline-flex rounded-full bg-(--gold) px-3 py-1 text-xs font-extrabold text-white">
+                  Recommended
+                </p>
+              ) : null}
+              <h3 className="font-display text-xl font-bold text-(--emerald-deep)">
+                {plan.name}
+              </h3>
+              <p className="mt-3 text-3xl font-black text-(--emerald)">
+                {plan.price}
+                <span className="text-sm font-bold text-(--ink-muted)">
+                  {" "}
+                  / {formatPeriod(plan.billing_period)}
+                </span>
+              </p>
+              <ul className="mt-5 grid gap-2 text-sm font-semibold text-(--ink-muted)">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex gap-2">
+                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-(--gold)" />
+                    <span>{feature}</span>
+                  </li>
                 ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+              </ul>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="rounded-[1.25rem] bg-(--surface-soft) p-6 text-center">
+          <p className="font-bold text-(--emerald)">No active fee plans available.</p>
+        </div>
+      )}
       <div className="mt-8 grid gap-5 rounded-[1.25rem] bg-(--surface-soft) p-5 md:grid-cols-[1fr_auto] md:items-center">
         <div>
           <p className="font-bold text-(--emerald)">1-on-1 Live Separate Lessons</p>
-          <p className="mt-1 text-sm text-(--ink-muted)">30 minutes per session. Regional support: {plan.contact}</p>
+          <p className="mt-1 text-sm text-(--ink-muted)">
+            30 minutes per session. Flexible scheduling for children and adults.
+          </p>
         </div>
         <div className="flex flex-wrap gap-3">
           <ButtonLink href="/registration">Book Free Trial</ButtonLink>

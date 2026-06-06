@@ -10,7 +10,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.107.0",
     "lucide-react": "^1.14.0",
+    "marked": "^18.0.5",
     "next": "16.2.4",
     "react": "19.2.6",
     "react-dom": "19.2.6"

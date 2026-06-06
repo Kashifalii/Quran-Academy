@@ -95,6 +95,55 @@ textarea {
   color: var(--emerald-deep);
 }
 
+.prose-quran {
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.prose-quran h1,
+.prose-quran h2,
+.prose-quran h3 {
+  color: var(--foreground);
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1.6em 0 0.45em;
+}
+
+.prose-quran h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.prose-quran h2 {
+  font-size: clamp(1.55rem, 4vw, 2.25rem);
+}
+
+.prose-quran h3 {
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+}
+
+.prose-quran p,
+.prose-quran ul,
+.prose-quran ol {
+  margin-block: 1em;
+}
+
+.prose-quran ul,
+.prose-quran ol {
+  padding-left: 1.35rem;
+}
+
+.prose-quran li {
+  margin-block: 0.35rem;
+}
+
+.prose-quran a {
+  color: var(--emerald);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
 @media (max-width: 640px) {
   .container-page {
     width: min(100% - 36px, 1140px);

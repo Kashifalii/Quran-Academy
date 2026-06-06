@@ -3,6 +3,7 @@ import { FeeTabs } from "@/components/FeeTabs";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeader } from "@/components/SectionHeader";
 import { createMetadata } from "@/lib/seo";
+import { getPublicFeePlans } from "@/lib/data/fee-plans";
 import { CircleDollarSign } from "lucide-react";
 
 export const metadata: Metadata = createMetadata({
@@ -12,7 +13,9 @@ export const metadata: Metadata = createMetadata({
   path: "/fee-plans",
 });
 
-export default function FeePlansPage() {
+export default async function FeePlansPage() {
+  const plans = await getPublicFeePlans();
+
   return (
     <>
       <PageHero
@@ -27,7 +30,7 @@ export default function FeePlansPage() {
           title="Professional Quran Academy Pricing"
           description="Class Type: 1-on-1 Live Separate Lessons. Class Duration: 30 Minutes Per Session."
         />
-        <FeeTabs />
+        <FeeTabs plans={plans} />
       </section>
     </>
   );
