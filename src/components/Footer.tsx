@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navItems } from "@/data/site";
 import { ButtonLink } from "./ButtonLink";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -24,12 +25,14 @@ export function Footer() {
               href="/"
               className="focus-ring flex flex-col items-start gap-4 md:items-center"
             >
-              <span className="flex size-24 items-center justify-center rounded-full bg-(--gold) p-2 text-3xl font-black text-white shadow-[0_18px_36px_rgba(0,0,0,0.18)] outline-4 outline-yellow-500/20 sm:size-28 sm:text-4xl">
-                قرآن
-              </span>
-              <span className="font-display text-xl font-bold">
-                Quran Academy
-              </span>
+       <Image
+                  src="/images/logo.png"
+                  alt="Quran Academy learning environment"
+                  width={170}
+                  height={170}
+                  priority
+                  className="object-cover"
+                />
             </Link>
           </div>
           <div>

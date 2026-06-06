@@ -110,9 +110,9 @@ export function Header() {
             width={70}
             height={60}
             priority
-            className="object-cover leading-tight"
+            className="object-cover"
           />
-           <span className="font-display text-sm font-bold">
+           <span className="font-display text-sm font-bold leading-tight">
             TaleemulQuran <br></br> Campus
           </span>
         </Link>
