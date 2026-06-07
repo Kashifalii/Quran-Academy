@@ -101,21 +101,20 @@ export function Header() {
         aria-label="Main navigation"
       >
         <Link href="/" className="focus-ring flex items-center gap-3">
-          {/* <span className="flex size-11 items-center justify-center rounded-full bg-(--gold) p-2 text-lg font-black text-white shadow-[0_10px_22px_rgba(230,169,54,0.22)] outline-4 outline-yellow-500/20">
-            قرآن
-          </span> */}
-          <Image
-            src="/images/logo.png"
-            alt="Quran Academy learning environment"
-            width={70}
-            height={60}
-            priority
-            className="object-cover"
-          />
-           <span className="font-display text-sm font-bold leading-tight">
-            TaleemulQuran <br></br> Campus
-          </span>
-        </Link>
+  <Image
+    src="/images/logo.png"
+    alt="taleemulquran campus logo"
+    width={70}
+    height={70}
+    priority
+    className="h-10 w-auto object-contain"
+  />
+
+  <span className="font-display text-sm font-bold leading-tight">
+    TaleemulQuran <br />
+    Campus
+  </span>
+</Link>
         <div className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => (
             <Link

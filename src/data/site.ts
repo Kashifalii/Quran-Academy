@@ -18,6 +18,7 @@ export type Material = {
   description: string;
   level: string;
   downloadLabel: string;
+  downloadLink?: string;
 };
 
 export const navItems = [
@@ -125,9 +126,9 @@ export const teachers = {
 };
 
 export const materials: Material[] = [
-  { slug: "tajweed-guide", title: "Tajweed Quick Guide", description: "A concise reference for common Tajweed rules with practice checkpoints.", level: "Beginner to Intermediate", downloadLabel: "Open Tajweed Guide" },
-  { slug: "quran-basics", title: "Quran Reading Basics", description: "Foundational reading notes for students beginning Quranic Arabic.", level: "Beginner", downloadLabel: "Open Reading Notes" },
-  { slug: "daily-duas", title: "Daily Duas Collection", description: "Everyday duas for children and families with transliteration support.", level: "All levels", downloadLabel: "Open Dua Collection" }
+  { slug: "tajweed-guide", title: "Tajweed Quick Guide", description: "A concise reference for common Tajweed rules with practice checkpoints.", level: "Beginner to Intermediate", downloadLabel: "Open Tajweed Guide", downloadLink: "https://www.equranschool.com/tajweedrules.pdf" },
+  { slug: "quran-basics", title: "Quran Reading Basics", description: "Foundational reading notes for students beginning Quranic Arabic.", level: "Beginner", downloadLabel: "Open Reading Notes" , downloadLink: "https://download.understandquran.com/fileadmin/user_upload/extras/tajweed/Read_Quran.pdf"},
+  { slug: "daily-duas", title: "Daily Duas Collection", description: "Everyday duas for children and families with transliteration support.", level: "All levels", downloadLabel: "Open Dua Collection", downloadLink: "https://www.duaandazkar.com/wp-content/uploads/Daily-Essential-Duas.pdf" }
 ];
 
 export const pricing = {

@@ -45,7 +45,8 @@ export default function MaterialsPage() {
                 {material.description}
               </p>
               <Link
-                href={`/materials/${material.slug}`}
+                href={`${material.downloadLink}`}
+                target="_blank"
                 className="focus-ring mt-6 inline-flex rounded-full border border-(--gold) px-5 py-2 text-sm font-extrabold text-(--emerald) hover:bg-(--gold-soft)"
               >
                 {material.downloadLabel}

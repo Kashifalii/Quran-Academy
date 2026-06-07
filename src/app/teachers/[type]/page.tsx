@@ -36,12 +36,12 @@ export default async function TeachersPage({ params }: TeacherPageProps) {
   return (
     <>
       <PageHero
-        title={`${type} Quran Teachers`}
+        title={`Quran Teachers`}
         subtitle="Qualified instructors for one-on-one Quran learning."
         icon={<Users className="size-8" />}
       />
 
-      <section className="container-page py-16 sm:py-20">
+      {/* <section className="container-page py-16 sm:py-20">
         <SectionHeader
           eyebrow="Our Scholars"
           title={
@@ -49,7 +49,7 @@ export default async function TeachersPage({ params }: TeacherPageProps) {
           }
         />
 
-        {/* links */}
+     
         <div className="z-10 mx-auto mt-7 flex w-fit items-center justify-center gap-3 rounded-full border border-(--line-soft) bg-(--surface) p-2 shadow-(--shadow-card)">
           <Link
             href="/teachers/male"
@@ -109,6 +109,64 @@ export default async function TeachersPage({ params }: TeacherPageProps) {
               </dl>
             </article>
           ))}
+        </div>
+      </section> */}
+
+      <section className="container-page py-16 sm:py-20">
+        <SectionHeader
+          eyebrow="Our Expert Teachers"
+          title="Our Expert Quran Teachers"
+          description="Highly qualified, patient, and professional instructors guiding students step-by-step."
+        />
+
+        <div className="mt-8 space-y-8">
+          <p className="text-(--ink-muted)">We take pride in having highly qualified and experienced Quran teachers dedicated to providing authentic Islamic education with patience, care, and professionalism. Our teachers are not just instructors — they are mentors who guide students step by step in learning the Holy Quran with correct pronunciation, understanding, and confidence.</p>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="font-bold mb-3">Teacher Skills & Expertise</h3>
+              <ul className="list-inside list-disc text-(--ink-muted) space-y-1">
+                <li>Noorani Qaida Experts for beginners</li>
+                <li>Quran Reading with Proper Tajweed Rules</li>
+                <li>Quran Memorization (Hifz) Specialists</li>
+                <li>Quran Translation & Understanding Teachers</li>
+                <li>Islamic Studies for Children & Beginners</li>
+                <li>One-on-One Personalized Teaching Approach</li>
+                <li>Experienced in Teaching Kids & Adults</li>
+                <li>Friendly, Patient & Student-Focused Teaching Style</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold mb-3">What Students Learn</h3>
+              <ul className="list-inside list-disc text-(--ink-muted) space-y-1">
+                <li>Basic Noorani Qaida Course (for beginners)</li>
+                <li>Quran Reading Course with Tajweed</li>
+                <li>Quran Memorization (Hifz) Program</li>
+                <li>Quran Translation & Tafseer Basics</li>
+                <li>Islamic Studies for Kids</li>
+                <li>Daily Practice & Progress Evaluation</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold mb-3">Why Our Teachers Are Different</h3>
+              <ul className="list-inside list-disc text-(--ink-muted) space-y-1">
+                <li>Certified & Experienced Quran Teachers</li>
+                <li>Structured Learning Plans for Every Student</li>
+                <li>Flexible Class Timing</li>
+                <li>Interactive Online Learning Sessions</li>
+                <li>Regular Progress Reports & Feedback</li>
+                <li>Focus on Correct Tajweed from Day One</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h4 className="font-display text-lg font-bold">Start Learning With Confidence</h4>
+            <p className="mt-3 text-(--ink-muted)">Whether you are a beginner or want to improve your recitation, our teachers are here to guide you at every step.</p>
+            <Link href="/contact" className="focus-ring mt-6 inline-block rounded-full bg-(--gold) px-5 py-3 text-sm font-bold text-black hover:bg-(--gold-soft)">Book your free trial class</Link>
+          </div>
         </div>
       </section>
     </>
