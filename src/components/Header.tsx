@@ -121,7 +121,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold) ${
-                pathname === item.href ? "text-[var(--gold)]" : "text-white/88"
+                pathname === item.href ? "text-var(--gold)" : "text-white/88"
               }`}
             >
               {item.label}
@@ -132,7 +132,7 @@ export function Header() {
               href="/dashboard"
               className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold) ${
                 pathname.startsWith("/dashboard")
-                  ? "text-[var(--gold)]"
+                  ? "text-var(--gold)"
                   : "text-white/88"
               }`}
             >
