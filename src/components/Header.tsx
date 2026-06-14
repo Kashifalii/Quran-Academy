@@ -110,8 +110,8 @@ export function Header() {
     className="h-10 w-auto object-contain"
   />
 
-  <span className="font-display text-sm font-bold leading-tight">
-    TaleemulQuran <br />
+  <span className="font-display text-sm font-bold leading-tight w-27.5">
+    TaleemulQuran 
     Campus
   </span>
 </Link>

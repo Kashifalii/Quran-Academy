@@ -67,6 +67,7 @@ export default function HomePage() {
     <>
       <HomeHero />
 
+      {/* about */}
       <section className="container-page grid gap-12 py-16 sm:py-20 lg:grid-cols-[1fr_0.9fr] lg:items-center">
         <div>
           <SectionHeader
@@ -114,6 +115,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* courses */}
       <section className="bg-(--surface-soft) py-16 sm:py-20">
         <div className="container-page">
           <SectionHeader
@@ -132,6 +134,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* why us */}
       <section className="container-page py-16 sm:py-20">
         <SectionHeader
           eyebrow="Why Choose Us"
@@ -157,6 +160,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* upcomming events */}
       <section className="relative py-16 text-white sm:py-20">
         {/* Overlay */}
         <div className="absolute inset-0 -z-10">
@@ -196,6 +200,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* testimonials */}
       <section className="container-page py-16 sm:py-20">
         <SectionHeader
           eyebrow="Student Feedback"
@@ -219,6 +224,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* faqs */}
       <section className="ornament-bg py-16 sm:py-20">
         <div className="container-page">
           <SectionHeader

@@ -99,7 +99,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
                 sizes="(min-width: 1024px) 40vw, 100vw"
               />
             </div>
-            <div className="p-6">
+            {/* <div className="p-6">
               <h3 className="font-display text-2xl font-bold">Fee Snapshot</h3>
               <dl className="mt-4 grid gap-3 text-sm">
                 {Object.entries(course.fees).map(([region, fee]) => (
@@ -114,7 +114,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
                   </div>
                 ))}
               </dl>
-            </div>
+            </div> */}
           </div>
         </aside>
       </section>

@@ -28,7 +28,7 @@ export function CourseCard({ course }: { course: Course }) {
           {course.shortDescription}
         </p>
         <div className="mt-5 flex items-center justify-between gap-4">
-          <span className="text-sm font-extrabold text-(--emerald)">
+          <span className="text-sm font-extrabold text-(--emerald) opacity-0">
             {course.duration}
           </span>
           <Link

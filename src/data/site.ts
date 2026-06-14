@@ -46,6 +46,37 @@ export const courses: Course[] = [
     fees: { USA: "$45/month", UK: "£39/month", Europe: "€42/month", Australia: "A$69/month", UAE: "Dhs 165/month" }
   },
   {
+  slug: "tarjuma-tafseer",
+  title: "Tarjuma & Tafseer",
+  category: "Recitation",
+  image: "/images/cards/card7.webp",
+  shortDescription:
+    "Understand the meanings, context, and explanations of the Holy Quran through translation and Tafseer.",
+  description:
+    "Deepen your connection with the Quran by studying word meanings, translations, and authentic Tafseer. Learn the historical context, lessons, and practical guidance of Quranic verses with experienced teachers in one-on-one sessions.",
+  duration: "6-12 months",
+  schedule: "Flexible 45-minute live lessons",
+  objectives: [
+    "Understand Quranic translations",
+    "Study authentic Tafseer",
+    "Learn historical context of verses",
+    "Extract practical lessons and guidance"
+  ],
+  outcomes: [
+    "Better understanding of the Quran",
+    "Stronger connection with Islamic teachings",
+    "Ability to reflect on Quranic verses",
+    "Enhanced spiritual growth"
+  ],
+  fees: {
+    USA: "$55/month",
+    UK: "£47/month",
+    Europe: "€52/month",
+    Australia: "A$79/month",
+    UAE: "Dhs 199/month"
+  }
+},
+  {
     slug: "quran-reading",
     title: "Quran Reading",
     category: "Recitation",
