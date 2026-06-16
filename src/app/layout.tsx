@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { createMetadata } from "@/lib/seo";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   ...createMetadata({
@@ -39,6 +40,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
+        <WhatsAppButton />
         <main>{children}</main>
         <Footer />
       </body>
