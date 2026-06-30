@@ -25,22 +25,23 @@ export function Footer() {
               href="/"
               className="focus-ring flex flex-col items-start gap-4 md:items-center"
             >
-       <Image
-                  src="/images/logo.png"
-                  alt="Quran Academy learning environment"
-                  width={170}
-                  height={170}
-                  priority
-                  className="object-cover"
-                />
+              <Image
+                src="/images/logo.png"
+                alt="Quran Academy learning environment"
+                width={170}
+                height={170}
+                priority
+                className="object-cover"
+              />
             </Link>
           </div>
           <div>
             <h3 className="font-display mb-4 text-lg font-bold">Information</h3>
             <p className="max-w-xs text-sm leading-6 text-white/76">
-              Quran Academy provides live one-on-one Quran learning with
-              qualified male and female teachers, flexible schedules, and
-              family-friendly fee plans.
+              We provide structured online Quran classes for kids and adults
+              worldwide. With flexible timings, one-on-one sessions, and
+              experienced teachers, we ensure quality Islamic education for
+              every learner.
             </p>
           </div>
           <div>
