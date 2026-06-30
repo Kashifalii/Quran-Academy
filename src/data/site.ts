@@ -171,8 +171,12 @@ export const pricing = {
 };
 
 export const faqs = [
-  { question: "How do I enroll in Quran Academy?", answer: "Choose a course, submit the registration form, and our coordinator will contact you to arrange a free trial class." },
-  { question: "Are female teachers available?", answer: "Yes. Female teachers are available for girls, women, and younger children based on preference and availability." },
-  { question: "What are the class timings?", answer: "Timings are flexible. We schedule one-on-one lessons around the student timezone and teacher availability." },
-  { question: "Which countries are supported?", answer: "We support students in the USA, UK, Europe, Australia, UAE, and other regions through online live classes." }
+  { question: "What courses do you offer?", answer: "We offer Noorani Qaida, Quran Reading, Tajweed, Hifz Program, Tarjuma & Tafseer, Islamic Studies, and Arabic Language courses for all age groups." },
+  { question: "Are your classes online or physical?", answer: "All our classes are conducted online through live one-to-one sessions, allowing students to learn from anywhere in the world." },
+  { question: "Do you provide female Quran teachers?", answer: "Yes, we have both male and female qualified tutors so students can choose according to their preference." },
+  { question: "What is the duration of each class?", answer: "Each class usually lasts between 30 to 60 minutes depending on the course and student level." },
+  { question: " Do you offer a free trial class?", answer: "Yes, we offer a free trial class so students can understand our teaching style before enrolling." },
+  { question: "What are the class timings?", answer: "We offer flexible timings so students can schedule classes according to their convenience." },
+  { question: "Is this suitable for children and adults?", answer: "Yes, our courses are designed for kids, beginners, and adults of all ages." },
+  { question: "What do I need for online classes?", answer: "You only need a smartphone, tablet, or computer with an internet connection." },
 ];

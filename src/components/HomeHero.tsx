@@ -29,17 +29,17 @@ export function HomeHero() {
           </p>
 
           <h1 className="font-display text-2xl min-[480px]:text-3xl font-bold sm:text-5xl md:text-6xl xl:text-7xl">
-            Pray to Allah and Learning Quran with Confidence
+           Illuminate Your Life with the Light of the Quran
           </h1>
 
           <p className="mt-2 min-[480px]:mt-4 max-w-2xl text-sm text-white/82 sm:mt-5 sm:text-lg">
-            Live one-on-one Quran classes with certified male and female
-            teachers, flexible schedules, and a caring Islamic learning
-            environment for every family.
+           Master Quran reading, Tajweed, and memorization with certified tutors in personalized online
+classes for kids and adults worldwide.
+
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <ButtonLink href="/registration">Book Free Trial</ButtonLink>
+            <ButtonLink href="/registration">Start Learning Today</ButtonLink>
 
             <ButtonLink href="/courses" variant="light">
               Explore Courses

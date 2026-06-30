@@ -49,16 +49,16 @@ const features = [
 
 const testimonials = [
   {
-    name: "Amina S.",
-    text: "The trial class helped us choose the right level, and my son became comfortable reading within weeks.",
+    name: "Ayesha Khan",
+    text: "The teachers are very kind and professional. My child started reading Quran confidently within a few weeks The classes are easy to understand and very well organized.",
   },
   {
-    name: "Omar K.",
-    text: "Patient teachers, clear lesson plans, and flexible timings made Quran learning practical for our family.",
+    name: "Muhammad Usman",
+    text: "Excellent online Quran academy. The Tajweed lessons are very clear, and the tutor gives personal attention in every class. Highly recommended for beginners.",
   },
   {
-    name: "Fatima R.",
-    text: "The female teacher option and regular feedback gave us confidence from the first month.",
+    name: "Fatima Rehman",
+    text: "I really appreciate the flexible timing. I can easily manage my Quran classes with my daily routine. The teaching method is simple and effective.",
   },
 ];
 
@@ -73,27 +73,31 @@ export default function HomePage() {
           <SectionHeader
             align="left"
             eyebrow="Welcome to Quran Academy"
-            title="In the Name of Allah, the Beneficent, the Merciful"
+            title="Learn the Quran with Trusted Experts"
           />
           <p className=" mt-6 text-sm sm:text-base text-(--ink-muted)">
-            Quran Academy is a frontend educational portal for families seeking
-            structured online Quran learning. Our programs combine qualified
-            teachers, personal attention, flexible schedules, and a calm Islamic
-            environment for children and adults.
+           We provide structured online Quran classes for kids and adults worldwide. With
+flexible timings, one-on-one sessions, and experienced teachers, we ensure quality Islamic
+education for every learner.
+
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
             <div className="rounded-[1.25rem] border border-(--line-soft) bg-(--surface) p-5 shadow-(--shadow-card)">
               <h3 className="font-display text-xl font-bold">Our Vision</h3>
               <p className="mt-2 text-sm leading-6 text-(--ink-muted)">
-                Make Quran learning accessible, respectful, and consistent for
-                students worldwide.
+              
+
+To inspire a global community connected with the Quran through quality online
+Islamic education.
+
               </p>
             </div>
             <div className="rounded-[1.25rem] border border-(--line-soft) bg-(--surface) p-5 shadow-(--shadow-card)">
               <h3 className="font-display text-xl font-bold">Our Mission</h3>
               <p className="mt-2 text-sm leading-6 text-(--ink-muted)">
-                Deliver high-quality Quran instruction through caring teachers
-                and practical lesson plans.
+                Our mission is to provide easy, accessible, and high-quality Quran education to
+students worldwide. We aim to help children and adults learn the Holy Quran with proper
+Tajweed, understanding, and love, guided by qualified and compassionate tutors.
               </p>
             </div>
           </div>
@@ -138,7 +142,7 @@ export default function HomePage() {
       <section className="container-page py-16 sm:py-20">
         <SectionHeader
           eyebrow="Why Choose Us"
-          title="Together We Prosper the House of Allah"
+          title="Your Trusted Quran Learning Platform"
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
@@ -183,15 +187,13 @@ export default function HomePage() {
               Upcoming Event
             </p>
             <h2 className="font-display mt-3 text-3xl sm:text-4xl font-bold">
-              Grand Quran Learning Orientation
+               Quran Learning Orientation
             </h2>
             <p className="mt-5 max-w-xl text-sm sm:text-base  text-white/80">
-              Join our upcoming Quran learning orientation to explore our
-              teaching approach, interact with experienced instructors, and
-              understand how online classes are structured for students of all
-              ages. This session will help parents and learners choose the right
-              program, ask questions directly, and begin their Quran learning
-              journey with clarity and confidence.
+              Join our orientation session to learn about our teaching methods, class structure, and
+courses. Meet our experienced instructors, ask questions, and discover the right Quran learning program
+for you or your child with full confidence.
+
             </p>
             <div className="mt-8">
               <ButtonLink href="/registration">Register Today</ButtonLink>
