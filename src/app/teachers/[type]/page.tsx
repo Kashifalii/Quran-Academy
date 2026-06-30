@@ -36,8 +36,8 @@ export default async function TeachersPage({ params }: TeacherPageProps) {
   return (
     <>
       <PageHero
-        title={`Quran Teachers`}
-        subtitle="Qualified instructors for one-on-one Quran learning."
+        title={`Our Expert Quran Teachers`}
+        subtitle="Our highly qualified Quran teachers are dedicated to providing authentic, structured, and easy-to-understand Islamic education for students of all ages."
         icon={<Users className="size-8" />}
       />
 
@@ -120,27 +120,31 @@ export default async function TeachersPage({ params }: TeacherPageProps) {
         />
 
         <div className="mt-8 space-y-8">
-          <p className="text-(--ink-muted)">We take pride in having highly qualified and experienced Quran teachers dedicated to providing authentic Islamic education with patience, care, and professionalism. Our teachers are not just instructors — they are mentors who guide students step by step in learning the Holy Quran with correct pronunciation, understanding, and confidence.</p>
+          <p className="text-(--ink-muted)">
+            We take pride in having experienced and professional Quran teachers
+            who guide students with patience, care, and dedication. Our
+            instructors focus on building a strong foundation in Quran reading,
+            Tajweed, and understanding while ensuring every student learns with
+            confidence and clarity.
+          </p>
 
           <div className="space-y-8">
             <div>
               <h3 className="font-bold mb-3">Teacher Skills & Expertise</h3>
               <ul className="list-inside list-disc text-(--ink-muted) space-y-1">
-                <li>Noorani Qaida Experts for beginners</li>
-                <li>Quran Reading with Proper Tajweed Rules</li>
-                <li>Quran Memorization (Hifz) Specialists</li>
-                <li>Quran Translation & Understanding Teachers</li>
-                <li>Islamic Studies for Children & Beginners</li>
-                <li>One-on-One Personalized Teaching Approach</li>
-                <li>Experienced in Teaching Kids & Adults</li>
-                <li>Friendly, Patient & Student-Focused Teaching Style</li>
+                <li>Noorani Qaida (Basic foundation)</li>
+                <li>Quran Reading with proper Tajweed</li>
+                <li>Quran Memorization (Hifz Program)</li>
+                <li>Quran Translation & Tafseer basics</li>
+                <li>Islamic Studies for children and beginners</li>
+                <li>Regular practice and progress tracking</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-bold mb-3">What Students Learn</h3>
+              <h3 className="font-bold mb-3">What Students Will Learn</h3>
               <ul className="list-inside list-disc text-(--ink-muted) space-y-1">
-                <li>Basic Noorani Qaida Course (for beginners)</li>
+                <li>Structured step-by-step learning plans</li>
                 <li>Quran Reading Course with Tajweed</li>
                 <li>Quran Memorization (Hifz) Program</li>
                 <li>Quran Translation & Tafseer Basics</li>
@@ -150,22 +154,33 @@ export default async function TeachersPage({ params }: TeacherPageProps) {
             </div>
 
             <div>
-              <h3 className="font-bold mb-3">Why Our Teachers Are Different</h3>
+              <h3 className="font-bold mb-3">Why Choose Our Teachers</h3>
               <ul className="list-inside list-disc text-(--ink-muted) space-y-1">
-                <li>Certified & Experienced Quran Teachers</li>
-                <li>Structured Learning Plans for Every Student</li>
-                <li>Flexible Class Timing</li>
-                <li>Interactive Online Learning Sessions</li>
-                <li>Regular Progress Reports & Feedback</li>
-                <li>Focus on Correct Tajweed from Day One</li>
+                <li>Structured step-by-step learning plans</li>
+                <li>Flexible online class timings</li>
+                <li>Interactive and engaging teaching style</li>
+                <li>Regular feedback and progress reports</li>
+                <li>Focus on correct recitation from day one</li>
               </ul>
             </div>
           </div>
 
           <div className="text-center">
-            <h4 className="font-display text-lg font-bold">Start Learning With Confidence</h4>
-            <p className="mt-3 text-(--ink-muted)">Whether you are a beginner or want to improve your recitation, our teachers are here to guide you at every step.</p>
-            <Link href="/contact" className="focus-ring mt-6 inline-block rounded-full bg-(--gold) px-5 py-3 text-sm font-bold text-black hover:bg-(--gold-soft)">Book your free trial class</Link>
+            <h4 className="font-display text-lg font-bold">
+              Quran Learning Resources & Reading Materials
+            </h4>
+            <p className="mt-3 text-(--ink-muted)">
+              Access a collection of helpful educational resources designed to
+              support your Quran learning journey. Explore reading materials,
+              practice guides, and learning tools to improve your understanding,
+              recitation, and Islamic knowledge.
+            </p>
+            <Link
+              href="/contact"
+              className="focus-ring mt-6 inline-block rounded-full bg-(--gold) px-5 py-3 text-sm font-bold text-black hover:bg-(--gold-soft)"
+            >
+              Book your free trial class
+            </Link>
           </div>
         </div>
       </section>
