@@ -15,17 +15,30 @@ export function DeleteConfirmButton({
   label?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [feedback, setFeedback] = useState("");
   const action = kind === "blog" ? deleteBlogPost : deleteFeePlan;
+
+  const handleSubmit = () => {
+    setOpen(false);
+    setFeedback(
+      `${kind === "blog" ? "Blog post" : "Fee plan"} deleted successfully.`,
+    );
+  };
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="focus-ring rounded-full border border-red-200 px-4 py-2 text-xs font-extrabold text-red-700"
-      >
-        {label}
-      </button>
+      <div className="flex flex-col items-end gap-2">
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="focus-ring rounded-full border border-red-200 px-4 py-2 text-xs font-extrabold text-red-700"
+        >
+          {label}
+        </button>
+        {feedback ? (
+          <p className="text-xs font-semibold text-(--emerald)">{feedback}</p>
+        ) : null}
+      </div>
       {open ? (
         <div className="fixed inset-0 z-50 grid place-items-center bg-black/45 p-4">
           <div className="w-full max-w-sm rounded-3xl border border-(--line-soft) bg-(--surface) p-6 shadow-2xl">
@@ -41,7 +54,7 @@ export function DeleteConfirmButton({
               >
                 Cancel
               </button>
-              <form action={action}>
+              <form action={action} onSubmit={handleSubmit}>
                 <input type="hidden" name="id" value={id} />
                 <button
                   type="submit"
