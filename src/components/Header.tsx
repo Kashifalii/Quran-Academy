@@ -60,7 +60,7 @@ export function Header() {
       <div className="border-b border-white/10 bg-(--emerald-deep)/55 backdrop-blur-xl">
         <div className="container-page flex min-h-11 items-center justify-between gap-4 text-xs font-semibold sm:text-sm">
           <p className="cursor-pointer">
-            <span className="font-bold">Call Us: +92 3120702891</span> 
+            <span className="font-bold">Call Us: +92 3120702891</span>
           </p>
           <p className="hidden sm:block">
             Online Quran classes for families worldwide
@@ -101,32 +101,33 @@ export function Header() {
         aria-label="Main navigation"
       >
         <Link href="/" className="focus-ring flex items-center gap-3">
-  <Image
-    src="/images/logo.png"
-    alt="taleemulquran campus logo"
-    width={70}
-    height={70}
-    priority
-    className="h-10 w-auto object-contain"
-  />
+          <Image
+            src="/images/logo.png"
+            alt="taleemulquran campus logo"
+            width={70}
+            height={70}
+            priority
+            className="h-10 w-auto object-contain"
+          />
 
-  <span className="font-display text-sm font-bold leading-tight w-27.5">
-    TaleemulQuran 
-    Campus
-  </span>
-</Link>
+          <span className="font-display text-sm font-bold leading-tight w-27.5">
+            TaleemulQuran Campus
+          </span>
+        </Link>
         <div className="hidden items-center gap-5 lg:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold) ${
-                pathname === item.href ? "text-var(--gold)" : "text-white/88"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems
+            .filter((item) => !item.mobileOnly)
+            .map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`focus-ring rounded-full px-2 py-1 text-sm font-extrabold transition hover:text-(--gold) ${
+                  pathname === item.href ? "text-var(--gold)" : "text-white/88"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           {isAdmin ? (
             <Link
               href="/dashboard"

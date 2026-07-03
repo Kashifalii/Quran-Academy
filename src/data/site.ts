@@ -34,6 +34,7 @@ export const navItems = [
   { href: "/materials", label: "Materials" },
   { href: "/registration", label: "Register" },
   { href: "/contact", label: "Contact" },
+  { href: "/fee-plans", label: "Fee Plans", mobileOnly: true },
 ];
 
 export const courses: Course[] = [
